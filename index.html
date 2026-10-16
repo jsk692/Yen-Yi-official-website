@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yenyi Lee｜UI/UX、品牌識別與 AI 設計</title>
+  <meta name="description" content="Yenyi Lee 的 UI/UX 與品牌設計作品集。專注於企業後台、設計系統、Visual Identity、Social Media Graphic Design 與 AI 工作流程，將複雜需求轉化為清晰且具商業價值的體驗。">
+  <meta name="author" content="Yenyi Lee">
+  <meta name="keywords" content="Yenyi Lee, UI/UX Designer, UX Designer, Visual Identity, Brand Design, Design System, AI Workflow, Taipei Designer">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yenyi Lee｜UI/UX、品牌識別與 AI 設計">
+  <meta property="og:description" content="以設計思維整合 UI/UX、品牌視覺與 AI 應用，打造清晰、直覺且有價值的數位體驗。">
+  <meta property="og:image" content="portfolio/avatar.png">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yenyi Lee｜UI/UX、品牌識別與 AI 設計">
+  <meta name="twitter:description" content="Yenyi Lee 的 UI/UX、品牌識別與 AI 設計作品集。">
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yenyi Lee",
+    "jobTitle": "UI/UX Designer and Visual Identity Designer",
+    "description": "專注於 UI/UX、品牌視覺識別、設計系統與 AI 工作流程的設計師。",
+    "email": "mailto:jsk692@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/yenyilee2025/?isSelfProfile=true"
+    ],
+    "knowsAbout": [
+      "UI/UX Design",
+      "Visual Identity Design",
+      "Design Systems",
+      "Information Architecture",
+      "AI-assisted Design Workflow"
+    ]
+  }
+  </script>
+  
+  <!-- Google Fonts: Inter & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              white: '#FFFFFF',
+              bgSubtle: '#F8FAFC',
+              bgMuted: '#F1F5F9',
+              blue: '#2563EB',
+              purple: '#7C3AED',
+              mint: '#10B981',
+              dark: '#111827',
+              gray: '#64748B',
+              border: '#E2E8F0',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+            mono: ['Inter', 'Noto Sans TC', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Base Reset & Smooth Rendering */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-padding-top: 5.5rem;
+    }
+
+    body {
+      font-family: Inter, 'Noto Sans TC', sans-serif;
+      line-height: 1.7;
+    }
+
+    section {
+      scroll-margin-top: 5.5rem;
+    }
+
+    h1, h2, h3, h4, p {
+      text-wrap: pretty;
+    }
+
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+    }
+
+    .font-mono {
+      font-family: Inter, 'Noto Sans TC', sans-serif !important;
+      letter-spacing: 0.04em;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -4rem;
+      z-index: 100;
+      padding: .65rem 1rem;
+      border-radius: .75rem;
+      background: #111827;
+      color: #fff;
+      font-size: .875rem;
+      transition: top .2s ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+    
+    ::selection {
+      background-color: #2563EB;
+      color: #FFFFFF;
+    }
+
+    /* Custom Glassmorphism */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Editorial Micro Accents */
+    .editorial-label {
+      font-size: 0.6875rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Subtle grid background pattern */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(226, 232, 240, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 232, 240, 0.45) 1px, transparent 1px);
+    }
+
+    /* Typewriter Blinking Cursor */
+    .typewriter-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 0.9em;
+      background-color: #2563EB;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Reduced Motion Fallback */
+    @media (prefers-reduced-motion: reduce) {
+      .typewriter-cursor {
+        animation: none;
+        opacity: 0;
+      }
+      * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section {
+        scroll-margin-top: 5rem;
+      }
+
+      .editorial-label {
+        letter-spacing: 0.12em;
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-white text-brand-dark font-sans selection:bg-brand-blue selection:text-white relative overflow-x-hidden antialiased">
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <main id="main-content">
+
+  <!-- ============================================== -->
+  <!-- 00. Global Navigation Header                   -->
+  <!-- ============================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Identity -->
+      <a href="#hero" class="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-lg p-1">
+        <div class="w-8 h-8 rounded-lg bg-brand-dark flex items-center justify-center text-white font-bold text-xs tracking-tighter transition-transform group-hover:scale-95 duration-200">
+          YL
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-bold tracking-tight text-brand-dark group-hover:text-brand-blue transition-colors">Yenyi Lee</span>
+          <span class="text-[10px] text-brand-gray tracking-wide font-normal">UI/UX · Visual Identity</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-xs uppercase tracking-wider text-brand-gray hover:text-brand-dark font-medium transition-colors">About</a>
+        <a href="#services" class="text-xs uppercase tracking-wider text-brand-gray hover:text-brand-dark font-medium transition-colors">Services</a>
+        <a href="#work" class="text-xs uppercase tracking-wider text-brand-gray hover:text-brand-dark font-medium transition-colors">Work</a>
+        <a href="#insights" class="text-xs uppercase tracking-wider text-brand-gray hover:text-brand-dark font-medium transition-colors">Insights</a>
+        <a href="#contact" class="text-xs uppercase tracking-wider text-brand-gray hover:text-brand-dark font-medium transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Action CTAs & Specs Trigger -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Floating Design Specs Inspector Trigger -->
+        <button id="open-specs-btn" type="button" class="editorial-label px-3 py-1.5 text-brand-gray hover:text-brand-blue bg-brand-bgMuted/80 hover:bg-brand-bgMuted rounded-full border border-brand-border transition-all flex items-center gap-1.5" title="點擊檢視設計策略與架構規範">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-purple"></span>
+          <span>Design Specs</span>
+        </button>
+
+        <!-- Book Consultation Primary CTA -->
+        <a href="https://calendar.app.google/rZFTnk3H9mxxmzDP9" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-4 py-2 bg-brand-dark text-white rounded-full hover:bg-brand-blue transition-colors duration-200 flex items-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Hamburger Button -->
+      <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-brand-dark hover:bg-brand-bgMuted focus:outline-none" aria-label="Toggle Navigation Menu">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Slide Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-border bg-white/95 px-6 py-6 space-y-4 shadow-xl">
+      <nav aria-label="Mobile navigation" class="flex flex-col space-y-3">
+        <a href="#about" class="mobile-nav-link text-sm font-medium text-brand-dark hover:text-brand-blue py-1">About｜關於我</a>
+        <a href="#services" class="mobile-nav-link text-sm font-medium text-brand-dark hover:text-brand-blue py-1">Services｜AI 解決方案</a>
+        <a href="#work" class="mobile-nav-link text-sm font-medium text-brand-dark hover:text-brand-blue py-1">Selected Work｜精選作品</a>
+        <a href="#insights" class="mobile-nav-link text-sm font-medium text-brand-dark hover:text-brand-blue py-1">Insights｜設計觀點</a>
+        <a href="#contact" class="mobile-nav-link text-sm font-medium text-brand-dark hover:text-brand-blue py-1">Contact｜聯絡合作</a>
+      </nav>
+      <div class="pt-4 border-t border-brand-border flex flex-col gap-3">
+        <button id="mobile-specs-btn" class="w-full text-center py-2 text-xs font-semibold text-brand-gray bg-brand-bgMuted rounded-lg border border-brand-border">
+          檢視設計策略規格 (Design Specs)
+        </button>
+        <a href="https://calendar.app.google/rZFTnk3H9mxxmzDP9" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 text-xs font-semibold text-white bg-brand-blue rounded-lg shadow-sm">
+          預約諮詢 (Book a Consultation)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- 01. Hero Section                               -->
+  <!-- ============================================== -->
+  <section id="hero" class="relative min-h-screen pt-32 pb-20 flex items-center bg-white bg-grid-pattern overflow-hidden">
+    
+    <!-- Background Ambient Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-brand-blue/8 to-brand-purple/6 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute -bottom-10 right-10 w-[350px] h-[350px] bg-brand-mint/5 rounded-full blur-2xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Left Column: Editorial Headline & Value Narrative -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Editorial Micro Taxonomy Badges -->
+          <div class="flex flex-wrap items-center gap-2.5 text-brand-gray">
+            <span class="editorial-label text-brand-blue bg-blue-50/80 px-2.5 py-1 rounded-md border border-blue-100">UI/UX DESIGN</span>
+            <span class="text-brand-border font-light">/</span>
+            <span class="editorial-label text-purple-700 bg-purple-50/80 px-2.5 py-1 rounded-md border border-purple-100">VISUAL IDENTITY</span>
+            <span class="text-brand-border font-light">/</span>
+            <span class="editorial-label text-emerald-700 bg-emerald-50/80 px-2.5 py-1 rounded-md border border-emerald-100">AI-ENHANCED WORKFLOW</span>
+          </div>
+
+          <!-- Master Title with Typewriter Effect -->
+          <div class="space-y-3">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-brand-dark leading-[1.08]">
+              <span id="typewriter-text" class="text-brand-dark">Think. Design.</span><span class="typewriter-cursor"></span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-brand-gray tracking-wide">
+              思考、設計。
+            </p>
+          </div>
+
+          <!-- Core Value Proposition -->
+          <p class="text-base sm:text-lg text-slate-700 font-normal leading-relaxed max-w-2xl border-l-2 border-brand-blue/30 pl-4">
+            整合 UI/UX、品牌視覺與 AI，將複雜需求轉化為清晰、直覺的數位體驗。
+          </p>
+
+          <!-- Primary & Secondary Action CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <!-- Primary CTA: Scroll to Works -->
+            <a href="#work" class="px-7 py-3.5 bg-brand-blue text-white rounded-full font-medium text-sm hover:bg-blue-700 transition-all duration-200 shadow-md shadow-blue-500/10 flex items-center gap-2 group">
+              <span>Explore My Work</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            
+            <!-- Secondary CTA: Direct Consultation Booking -->
+            <a href="https://calendar.app.google/rZFTnk3H9mxxmzDP9" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-white text-brand-dark border border-brand-border rounded-full font-medium text-sm hover:border-brand-purple hover:text-brand-purple transition-all duration-200 flex items-center gap-2 shadow-sm group">
+              <span>Let's Talk</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-mint animate-pulse"></span>
+            </a>
+          </div>
+
+          <!-- Trust & Experience Micro-Note -->
+          <div class="flex items-center gap-6 pt-4 text-xs text-brand-gray border-t border-brand-border/60 max-w-lg">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-dark font-semibold">6+ Years</span>
+              <span>設計實務經驗</span>
+            </div>
+            <div class="w-1 h-1 rounded-full bg-brand-border"></div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-dark font-semibold">B2B / SaaS / Brand</span>
+              <span>系統化整合思維</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: Abstract Generative Visual Installation -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Visual Device Frame -->
+          <div class="relative w-full aspect-square max-w-md mx-auto rounded-3xl border border-brand-border/80 bg-white/70 shadow-2xl shadow-slate-200/50 p-6 flex flex-col justify-between overflow-hidden">
+            
+            <!-- Generative Canvas for subtle node/data flow lines -->
+            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-auto cursor-crosshair opacity-75"></canvas>
+            
+            <!-- Top Card Header: Editorial Meta -->
+            <div class="relative z-10 flex items-center justify-between pb-4 border-b border-brand-border/60">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-blue"></span>
+                <span class="editorial-label text-brand-dark">DESIGN MATRIX SYSTEM</span>
+              </div>
+              <span class="text-[11px] font-mono text-brand-gray">V.26.1 / ACTIVE</span>
+            </div>
+
+            <!-- Center Visual Motif: Isometric Interface Layer Schema -->
+            <div class="relative z-10 py-6 pointer-events-none select-none">
+              <div class="space-y-3">
+                <!-- Layer 01: Information Architecture -->
+                <div class="bg-white/90 border border-brand-border rounded-xl p-3 shadow-sm transform -rotate-1 hover:rotate-0 transition-transform">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-brand-gray mb-1.5">
+                    <span class="text-brand-blue font-semibold">01 · INFORMATION ARCHITECTURE</span>
+                    <span>STRUCTURAL</span>
+                  </div>
+                  <div class="grid grid-cols-4 gap-1.5">
+                    <div class="h-1.5 bg-blue-100 rounded-full"></div>
+                    <div class="h-1.5 bg-blue-200 rounded-full"></div>
+                    <div class="h-1.5 bg-blue-500 rounded-full"></div>
+                    <div class="h-1.5 bg-slate-200 rounded-full"></div>
+                  </div>
+                </div>
+
+                <!-- Layer 02: Design System & Tokens -->
+                <div class="bg-white/90 border border-brand-border rounded-xl p-3 shadow-sm transform rotate-1 hover:rotate-0 transition-transform ml-4">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-brand-gray mb-1.5">
+                    <span class="text-brand-purple font-semibold">02 · DESIGN SYSTEM & TOKENS</span>
+                    <span>CONSISTENCY</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 rounded-full bg-brand-blue"></div>
+                    <div class="w-4 h-4 rounded-full bg-brand-purple"></div>
+                    <div class="w-4 h-4 rounded-full bg-brand-mint"></div>
+                    <div class="w-4 h-4 rounded-md bg-slate-100 border border-slate-300"></div>
+                    <div class="text-[10px] text-brand-gray font-mono ml-auto">RADIUS: 12PX</div>
+                  </div>
+                </div>
+
+                <!-- Layer 03: AI Exploration & Synthesis -->
+                <div class="bg-white/90 border border-brand-border rounded-xl p-3 shadow-sm transform -rotate-0.5 hover:rotate-0 transition-transform">
+                  <div class="flex items-center justify-between text-[11px] font-mono text-brand-gray mb-1.5">
+                    <span class="text-brand-mint font-semibold">03 · AI CO-CREATION ENGINE</span>
+                    <span>AUGMENTED</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[10px] text-brand-gray font-mono">
+                    <span class="truncate">INPUT: USER INTENT → SYNTHESIS</span>
+                    <span class="text-emerald-600 font-bold">100% ACCURATE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Card Meta: Interactive status hint -->
+            <div class="relative z-10 pt-3 border-t border-brand-border/60 flex items-center justify-between text-[10px] text-brand-gray font-mono">
+              <span class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-mint animate-pulse"></span>
+                <span>INTERACTIVE CANVAS</span>
+              </span>
+              <span>MOVE CURSOR TO EXPLORE</span>
+            </div>
+
+          </div>
+
+          <!-- Decorative Sub-label -->
+          <p class="text-center text-[11px] text-brand-gray font-mono mt-3">
+            FIG 1.0 — 系統化思考、品牌美學與 AI 擴增的交集構圖
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 02. About Me Section                           -->
+  <!-- ============================================== -->
+  <section id="about" class="py-28 bg-brand-bgSubtle border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono font-bold text-brand-blue tracking-widest uppercase">02 / ABOUT ME</span>
+          <span class="h-px w-8 bg-brand-blue"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+          設計始於理解，<br class="hidden sm:inline" />價值來自解決問題。
+        </h2>
+        <p class="text-sm font-medium text-brand-gray tracking-wider uppercase font-mono">
+          Yenyi Lee — UI/UX Designer · Visual Identity Designer
+        </p>
+      </div>
+
+      <!-- Narrative Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Left Column: Focal Quote & Guiding Principles -->
+        <div class="lg:col-span-5 space-y-8">
+          <div class="bg-white p-8 rounded-3xl border border-brand-border shadow-sm space-y-6">
+            <div class="flex items-center gap-4 pb-2">
+              <img src="portfolio/avatar.png" alt="Yenyi Lee 個人頭像" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md ring-1 ring-brand-border/70" loading="lazy">
+              <div>
+                <div class="text-xs font-mono font-semibold text-brand-blue tracking-widest uppercase">DESIGNER PROFILE</div>
+                <div class="mt-1 text-lg font-bold text-brand-dark">Yenyi Lee</div>
+                <div class="text-xs text-brand-gray mt-1">UI/UX · Visual Identity · AI Workflow</div>
+              </div>
+            </div>
+            <span class="text-4xl text-brand-blue font-sans font-bold">“</span>
+            <p class="text-xl font-medium text-brand-dark leading-relaxed -mt-4">
+              對我而言，設計是連結人、產品與品牌的橋梁。
+            </p>
+            <p class="text-sm text-brand-gray leading-relaxed">
+              從使用者需求出發，以清晰架構、直覺流程與一致視覺，讓複雜資訊更容易理解。
+            </p>
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-gray font-mono">
+              <span>DESIGN PHILOSOPHY</span>
+              <span class="text-brand-dark font-semibold">TAIPEI, TAIWAN</span>
+            </div>
+          </div>
+
+          <!-- Core Attributes Checklist -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 bg-white/70 rounded-2xl border border-brand-border">
+              <div class="text-brand-blue font-bold text-lg mb-1">Intelligent</div>
+              <p class="text-xs text-brand-gray">洞察系統核心脈絡</p>
+            </div>
+            <div class="p-4 bg-white/70 rounded-2xl border border-brand-border">
+              <div class="text-brand-purple font-bold text-lg mb-1">Refined</div>
+              <p class="text-xs text-brand-gray">克制留白與字體層次</p>
+            </div>
+            <div class="p-4 bg-white/70 rounded-2xl border border-brand-border">
+              <div class="text-brand-dark font-bold text-lg mb-1">Strategic</div>
+              <p class="text-xs text-brand-gray">重視架構、系統與維護性</p>
+            </div>
+            <div class="p-4 bg-white/70 rounded-2xl border border-brand-border">
+              <div class="text-brand-mint font-bold text-lg mb-1">Forward-Thinking</div>
+              <p class="text-xs text-brand-gray">探索 AI 與人機協作</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Structured Narrative Paragraphs -->
+        <div class="lg:col-span-7 space-y-10">
+          
+          <!-- Narrative Item 01 -->
+          <div class="space-y-3 pb-8 border-b border-brand-border/70">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono font-bold text-brand-blue">01</span>
+              <h3 class="text-lg font-bold text-brand-dark">融合設計思維與品牌策略</h3>
+            </div>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed pl-7">
+              連結品牌定位、使用情境與商業目標，建立兼具功能與辨識度的產品及視覺體驗。
+            </p>
+          </div>
+
+          <!-- Narrative Item 02 -->
+          <div class="space-y-3 pb-8 border-b border-brand-border/70">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono font-bold text-brand-purple">02</span>
+              <h3 class="text-lg font-bold text-brand-dark">以系統化思考，解決真實問題</h3>
+            </div>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed pl-7">
+              透過釐清問題、梳理需求與反覆驗證，找出兼顧體驗與執行的解法，建立可長期維護的系統。
+            </p>
+          </div>
+
+          <!-- Narrative Item 03 -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono font-bold text-brand-mint">03</span>
+              <h3 class="text-lg font-bold text-brand-dark">保持好奇，探索設計的更多可能</h3>
+            </div>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed pl-7">
+              持續探索設計工具與跨領域整合，在理解問題的基礎上，為使用者、品牌與產品創造長期價值。
+            </p>
+          </div>
+
+          <!-- Key Competencies Summary Chips -->
+          <div class="pt-4 pl-7 flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1.5 bg-white border border-brand-border rounded-lg text-slate-700">後台系統設計 (CMS / DAM)</span>
+            <span class="px-3 py-1.5 bg-white border border-brand-border rounded-lg text-slate-700">資訊架構 (Information Architecture)</span>
+            <span class="px-3 py-1.5 bg-white border border-brand-border rounded-lg text-slate-700">設計系統 (Design Systems)</span>
+            <span class="px-3 py-1.5 bg-white border border-brand-border rounded-lg text-slate-700">企業品牌視覺識別 (Brand Identity)</span>
+            <span class="px-3 py-1.5 bg-white border border-brand-border rounded-lg text-slate-700">AI 流程輔助與整合 (Human-AI Workflow)</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 03. Services & AI Solutions                    -->
+  <!-- ============================================== -->
+  <section id="services" class="py-28 bg-white border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono font-bold text-brand-blue tracking-widest uppercase">03 / SERVICES & AI SOLUTIONS</span>
+          <span class="h-px w-8 bg-brand-blue"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+          以 AI 驅動創新，<br class="hidden sm:inline" />讓設計成為企業成長的助力。
+        </h2>
+        <p class="text-base text-slate-600 leading-relaxed">
+          結合 UI/UX、視覺識別與 AI，優化工作流程、提升設計效率，打造一致且可落地的數位體驗。
+        </p>
+      </div>
+
+      <!-- Services 4-Column Editorial Matrix (Each card distinct & purposeful) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Service 01: UI/UX & Dashboard Design -->
+        <div class="group bg-brand-bgSubtle hover:bg-white border border-brand-border hover:border-brand-blue/50 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono font-bold text-brand-blue bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">SERVICE 01</span>
+              <span class="text-xs font-mono text-brand-gray">CORE UI/UX</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors">
+              UI/UX & Dashboard Design
+            </h3>
+            <p class="text-xs font-medium text-brand-gray mb-4 font-mono">後台系統與數位產品設計</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              透過需求分析、資訊架構與 AI 輔助，將複雜功能轉化為清晰高效的操作介面。
+            </p>
+          </div>
+
+          <div>
+            <div class="pt-6 border-t border-brand-border/70 space-y-2">
+              <div class="text-[11px] font-mono font-semibold text-brand-gray tracking-wider uppercase">重點能力</div>
+              <ul class="text-xs text-slate-600 space-y-1.5 font-sans">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>User Research & Requirement Analysis</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>Information Architecture & CMS Design</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>Interactive User Flow & Dashboard Systems</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>AI-Assisted Interface Exploration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 02: Brand Identity System -->
+        <div class="group bg-brand-bgSubtle hover:bg-white border border-brand-border hover:border-brand-purple/50 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono font-bold text-brand-purple bg-purple-50 px-2.5 py-1 rounded-md border border-purple-100">SERVICE 02</span>
+              <span class="text-xs font-mono text-brand-gray">BRANDING</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-purple transition-colors">
+              Brand Identity System
+            </h3>
+            <p class="text-xs font-medium text-brand-gray mb-4 font-mono">企業品牌視覺識別系統</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              結合品牌策略、視覺設計與 AI 輔助創意探索，建立從數位平台到實體應用的一致品牌形象，強化品牌辨識度與溝通效率。
+            </p>
+          </div>
+
+          <div>
+            <div class="pt-6 border-t border-brand-border/70 space-y-2">
+              <div class="text-[11px] font-mono font-semibold text-brand-gray tracking-wider uppercase">重點能力</div>
+              <ul class="text-xs text-slate-600 space-y-1.5 font-sans">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-purple"></span>Visual Identity & Logo Systems</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-purple"></span>Brand Guidelines & Design Tokens</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-purple"></span>Digital & Physical Touchpoint Application</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-purple"></span>Systematic Visual Consistency</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 03: Social Graphic Design -->
+        <div class="group bg-brand-bgSubtle hover:bg-white border border-brand-border hover:border-emerald-500/50 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-100">SERVICE 03</span>
+              <span class="text-xs font-mono text-brand-gray">MARKETING & MEDIA</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-mint transition-colors">
+              Social Graphic Design
+            </h3>
+            <p class="text-xs font-medium text-brand-gray mb-4 font-mono">社群視覺與數位內容設計</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              運用 AI 加速視覺概念發想、素材探索與內容製作，協助品牌更有效率地產出符合定位的社群視覺，提升內容產製的彈性與一致性。
+            </p>
+          </div>
+
+          <div>
+            <div class="pt-6 border-t border-brand-border/70 space-y-2">
+              <div class="text-[11px] font-mono font-semibold text-brand-gray tracking-wider uppercase">重點能力</div>
+              <ul class="text-xs text-slate-600 space-y-1.5 font-sans">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-mint"></span>Social Media Visuals & Campaign Graphics</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-mint"></span>Modular Visual Content Systems</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-mint"></span>AI-Assisted Rapid Creative Exploration</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-mint"></span>Multi-Platform Asset Adaptation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 04: AI-Enhanced Design Workflow -->
+        <div class="group bg-brand-bgSubtle hover:bg-white border border-brand-border hover:border-slate-800 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-mono font-bold text-slate-900 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-300">SERVICE 04</span>
+              <span class="text-xs font-mono text-brand-gray">AUGMENTED PROCESS</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors">
+              AI-Enhanced Design Workflow
+            </h3>
+            <p class="text-xs font-medium text-brand-gray mb-4 font-mono">AI 輔助設計流程與創意探索</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              探索 AI 在設計工作流程中的實際應用，協助團隊優化重複性工作、加速視覺探索、整理資訊及建立更有效率的內容產製流程。堅持以人為本與專業判斷，絕非盲目自動化。
+            </p>
+          </div>
+
+          <div>
+            <div class="pt-6 border-t border-brand-border/70 space-y-2">
+              <div class="text-[11px] font-mono font-semibold text-brand-gray tracking-wider uppercase">重點能力</div>
+              <ul class="text-xs text-slate-600 space-y-1.5 font-sans">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-800"></span>AI Workflow Exploration & Integration</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-800"></span>Rapid Creative Ideation & Prototyping</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-800"></span>Content Production Acceleration</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-800"></span>Human-AI Collaboration Guidelines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 04. Selected Work Section                      -->
+  <!-- ============================================== -->
+  <section id="work" class="py-28 bg-brand-bgSubtle border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-3xl space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono font-bold text-brand-blue tracking-widest uppercase">04 / SELECTED WORK</span>
+            <span class="h-px w-8 bg-brand-blue"></span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+            Designing Systems.<br />Creating Experiences.
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed max-w-2xl">
+            從系統介面到品牌視覺，展示設計如何解決問題、建立秩序。
+          </p>
+        </div>
+
+        <div class="text-xs text-brand-gray font-mono border-l-2 border-brand-border pl-4">
+          <span>* 真實專案展演，包含負責／協作的設計方法與架構原型</span>
+        </div>
+      </div>
+
+      <!-- Asymmetric Editorial Works Grid -->
+      <div class="mt-12 space-y-12">
+        
+        <!-- Project 01: CMS Redesign & Modernization (Full Width Hero Project) -->
+        <article class="bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            
+            <!-- Left Info Panel -->
+            <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-mono font-semibold text-brand-blue bg-blue-50 px-2 py-0.5 rounded">PROJECT 01</span>
+                  <span class="text-xs font-mono text-brand-gray">UI/UX & CMS</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark group-hover:text-brand-blue transition-colors">
+                  CMS Redesign & Modernization
+                </h3>
+                <p class="text-xs font-mono text-slate-500">後台內容管理系統改版與資訊架構重塑</p>
+                <p class="text-sm text-slate-600 leading-relaxed pt-2">
+                  重整企業後台的權限、發布流程與資料篩選，透過模組化元件打造高效率工作台。
+                </p>
+                
+                <div class="pt-4 space-y-2 text-xs">
+                  <div class="text-brand-gray font-mono uppercase tracking-wider text-[11px]">參與範疇 (My Role)</div>
+                  <div class="flex flex-wrap gap-1.5 text-slate-700">
+                    <span class="px-2 py-1 bg-brand-bgSubtle rounded border border-brand-border">Information Architecture</span>
+                    <span class="px-2 py-1 bg-brand-bgSubtle rounded border border-brand-border">User Flow Design</span>
+                    <span class="px-2 py-1 bg-brand-bgSubtle rounded border border-brand-border">Design System</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Modal Trigger -->
+              <div class="pt-8">
+                <button type="button" onclick="openCaseModal('cms')" class="inline-flex items-center gap-2 text-xs font-bold text-brand-blue group-hover:translate-x-1 transition-transform">
+                  <span>查看案例架構詳情 (View Case Scope)</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Visual Mockup (Bespoke Scalable SVG UI Diagram) -->
+            <div class="lg:col-span-7 bg-brand-bgSubtle border-t lg:border-t-0 lg:border-l border-brand-border p-6 sm:p-8 flex items-center justify-center relative overflow-hidden">
+              <!-- Mockup Container (Easily swappable with <img> tag) -->
+              <div class="w-full bg-white rounded-2xl border border-brand-border shadow-md p-4 space-y-4">
+                <div class="flex items-center justify-between border-b border-brand-border/60 pb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                    <span class="ml-2 text-[11px] font-mono text-brand-gray">CMS Workspace / Dashboard View</span>
+                  </div>
+                  <span class="text-[10px] font-mono bg-blue-50 text-brand-blue px-2 py-0.5 rounded">SYSTEM DEMO</span>
+                </div>
+                
+                <!-- Internal UI Mockup Schema -->
+                <div class="grid grid-cols-12 gap-3">
+                  <!-- Sidebar -->
+                  <div class="col-span-3 bg-brand-bgSubtle rounded-lg p-2.5 space-y-2">
+                    <div class="h-2 bg-slate-300 rounded w-3/4"></div>
+                    <div class="h-2 bg-blue-400 rounded w-5/6"></div>
+                    <div class="h-2 bg-slate-200 rounded w-2/3"></div>
+                    <div class="h-2 bg-slate-200 rounded w-4/5"></div>
+                    <div class="h-2 bg-slate-200 rounded w-1/2"></div>
+                  </div>
+                  <!-- Content Body -->
+                  <div class="col-span-9 space-y-3">
+                    <div class="grid grid-cols-3 gap-2">
+                      <div class="p-2 border border-brand-border rounded-lg bg-slate-50">
+                        <div class="text-[9px] text-slate-400 font-mono">PUBLISHED</div>
+                        <div class="text-sm font-bold text-slate-800">1,280</div>
+                      </div>
+                      <div class="p-2 border border-brand-border rounded-lg bg-slate-50">
+                        <div class="text-[9px] text-slate-400 font-mono">DRAFTS</div>
+                        <div class="text-sm font-bold text-brand-blue">42</div>
+                      </div>
+                      <div class="p-2 border border-brand-border rounded-lg bg-slate-50">
+                        <div class="text-[9px] text-slate-400 font-mono">LATENCY</div>
+                        <div class="text-sm font-bold text-emerald-600">98ms</div>
+                      </div>
+                    </div>
+                    <!-- Data Table Mockup -->
+                    <div class="border border-brand-border rounded-lg overflow-hidden">
+                      <div class="bg-slate-100 px-3 py-1.5 text-[9px] font-mono text-slate-600 grid grid-cols-4">
+                        <span>TITLE</span><span>STATUS</span><span>AUTHOR</span><span>ACTIONS</span>
+                      </div>
+                      <div class="px-3 py-2 text-[10px] grid grid-cols-4 border-t border-brand-border items-center">
+                        <span class="font-medium text-slate-700">Q3 Design Guidelines</span>
+                        <span class="text-emerald-600 font-mono text-[9px]">LIVE</span>
+                        <span class="text-slate-500">Yenyi</span>
+                        <span class="text-brand-blue font-mono text-[9px]">EDIT →</span>
+                      </div>
+                      <div class="px-3 py-2 text-[10px] grid grid-cols-4 border-t border-brand-border items-center bg-slate-50/50">
+                        <span class="font-medium text-slate-700">AI Prompt Library</span>
+                        <span class="text-amber-600 font-mono text-[9px]">REVIEW</span>
+                        <span class="text-slate-500">Team</span>
+                        <span class="text-brand-blue font-mono text-[9px]">EDIT →</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-[10px] text-center text-slate-400 font-mono pt-1">
+                  [ 圖片可替換區塊：可隨時置入真實高解析專案截圖或影片 ]
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Project 02 & 03: 2-Column Split -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Project 02: Digital Asset Management -->
+          <article class="bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-mono font-semibold text-brand-purple bg-purple-50 px-2 py-0.5 rounded">PROJECT 02</span>
+                <span class="text-xs font-mono text-brand-gray">SYSTEM PLATFORM</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors mb-2">
+                Digital Asset Management
+              </h3>
+              <p class="text-xs font-mono text-slate-500 mb-3">數位資產管理平台與檢索架構</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                以分面檢索、智慧標籤與視覺化網格，優化跨部門資產交付流程。
+              </p>
+            </div>
+
+            <!-- Visual Preview Card -->
+            <div class="px-8 pb-8">
+              <div class="bg-brand-bgSubtle border border-brand-border rounded-2xl p-4 space-y-3">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500">
+                  <span>TAXONOMY: BRAND ASSETS</span>
+                  <span>4,890 ITEMS</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2">
+                  <div class="aspect-video bg-blue-100 rounded-lg flex items-center justify-center text-[10px] font-mono text-blue-700">SVG ICONS</div>
+                  <div class="aspect-video bg-purple-100 rounded-lg flex items-center justify-center text-[10px] font-mono text-purple-700">PALETTES</div>
+                  <div class="aspect-video bg-emerald-100 rounded-lg flex items-center justify-center text-[10px] font-mono text-emerald-700">MOCKUPS</div>
+                </div>
+                <button type="button" onclick="openCaseModal('dam')" class="w-full text-center py-2 text-xs font-semibold text-brand-purple hover:bg-white rounded-lg transition-colors border border-transparent hover:border-brand-border">
+                  查看系統規劃 (View System Specs) →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: AI Feature Integration -->
+          <article class="bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-mono font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">PROJECT 03</span>
+                <span class="text-xs font-mono text-brand-gray">AI INTERACTION</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-brand-mint transition-colors mb-2">
+                AI Feature Integration
+              </h3>
+              <p class="text-xs font-mono text-slate-500 mb-3">AI 語音合成與智慧寫作輔助體驗設計</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                以 Prompt 滑桿與語音頻譜回饋，降低 AI 工具的使用門檻。
+              </p>
+            </div>
+
+            <!-- Visual Preview Card -->
+            <div class="px-8 pb-8">
+              <div class="bg-brand-bgSubtle border border-brand-border rounded-2xl p-4 space-y-3">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500">
+                  <span>VOICE SYNTHESIS ENGINE</span>
+                  <span class="text-emerald-600 font-bold">READY</span>
+                </div>
+                <div class="space-y-1.5">
+                  <div class="flex justify-between text-[9px] font-mono text-slate-500">
+                    <span>EMOTIONAL TONE</span><span>92% NATURAL</span>
+                  </div>
+                  <div class="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-emerald-500 w-[92%] rounded-full"></div>
+                  </div>
+                </div>
+                <button type="button" onclick="openCaseModal('ai')" class="w-full text-center py-2 text-xs font-semibold text-emerald-700 hover:bg-white rounded-lg transition-colors border border-transparent hover:border-brand-border">
+                  查看 AI 互動機制 (View Interaction) →
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Project 04 & 05: 2-Column Split -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Project 04: Design System & Guideline -->
+          <article class="bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-mono font-semibold text-slate-900 bg-slate-100 px-2 py-0.5 rounded">PROJECT 04</span>
+                <span class="text-xs font-mono text-brand-gray">DESIGN SYSTEM</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-brand-blue transition-colors mb-2">
+                Design System & Guideline
+              </h3>
+              <p class="text-xs font-mono text-slate-500 mb-3">多平台介面規範與原子元件庫構建</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                建立 Design Tokens、排版、對比度與互動狀態規範，維持跨平台一致性。
+              </p>
+            </div>
+
+            <!-- Visual Preview Card -->
+            <div class="px-8 pb-8">
+              <div class="bg-brand-bgSubtle border border-brand-border rounded-2xl p-4 space-y-3">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500">
+                  <span>DESIGN TOKENS HIERARCHY</span>
+                  <span>WCAG AAA COMPLIANT</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="px-3 py-1 bg-white border border-slate-300 text-[10px] font-mono rounded">Button/Primary</div>
+                  <div class="px-3 py-1 bg-white border border-slate-300 text-[10px] font-mono rounded">Input/Focus</div>
+                  <div class="px-3 py-1 bg-white border border-slate-300 text-[10px] font-mono rounded">Modal/Overlay</div>
+                </div>
+                <button type="button" onclick="openCaseModal('ds')" class="w-full text-center py-2 text-xs font-semibold text-slate-800 hover:bg-white rounded-lg transition-colors border border-transparent hover:border-brand-border">
+                  查看系統規範 (View Design Tokens) →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 05: Brand & Graphic Design -->
+          <article class="bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-mono font-semibold text-brand-blue bg-blue-50 px-2 py-0.5 rounded">PROJECT 05</span>
+                <span class="text-xs font-mono text-brand-gray">IDENTITY & GRAPHIC</span>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-brand-dark group-hover:text-brand-blue transition-colors mb-2">
+                Brand & Graphic Design
+              </h3>
+              <p class="text-xs font-mono text-slate-500 mb-3">品牌識別系統、字體策略與社群視覺語言</p>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                將品牌主張轉譯為 Logo、社群網格與系列海報，建立一致的品牌記憶。
+              </p>
+            </div>
+
+            <!-- Visual Preview Card -->
+            <div class="px-8 pb-8">
+              <div class="bg-brand-bgSubtle border border-brand-border rounded-2xl p-4 space-y-3">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500">
+                  <span>IDENTITY PALETTE & GRID</span>
+                  <span>EDITORIAL</span>
+                </div>
+                <div class="h-10 bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white text-[10px] font-mono tracking-widest uppercase">
+                  TYPOGRAPHY & BALANCE
+                </div>
+                <button type="button" onclick="openCaseModal('brand')" class="w-full text-center py-2 text-xs font-semibold text-brand-blue hover:bg-white rounded-lg transition-colors border border-transparent hover:border-brand-border">
+                  查看視覺範例 (View Identity) →
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Selected Project Archive: Real Client Work -->
+        <div class="mt-20 pt-16 border-t border-brand-border/70">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <div class="text-xs font-mono font-bold text-brand-purple tracking-widest uppercase mb-2">SELECTED PROJECT ARCHIVE</div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">實際負責／協作專案展演</h3>
+            </div>
+            <p class="max-w-md text-sm text-brand-gray leading-relaxed">呈現我在產品、內容系統、資料平台與 AI 服務中的設計參與。</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="group bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div class="aspect-[16/7] bg-slate-100 overflow-hidden">
+                <img src="portfolio/cms_intro.png" alt="CMS 內容管理系統專案畫面" class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-3 mb-3">
+                  <span class="text-xs font-mono font-semibold text-brand-blue bg-blue-50 px-2 py-0.5 rounded">CMS / UIUX</span>
+                  <span class="text-[10px] font-mono text-brand-gray">LEAD / COLLABORATION</span>
+                </div>
+                <h4 class="text-xl font-bold text-brand-dark">內容管理系統改版</h4>
+                <p class="text-sm text-slate-600 leading-relaxed mt-2">負責資訊架構、流程與後台介面，建立清晰的任務導向系統。</p>
+              </div>
+            </article>
+
+            <article class="group bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div class="aspect-[16/7] bg-slate-100 overflow-hidden">
+                <img src="portfolio/dam_intro.png" alt="數位資產管理平台專案畫面" class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-3 mb-3">
+                  <span class="text-xs font-mono font-semibold text-brand-purple bg-purple-50 px-2 py-0.5 rounded">DAM / PLATFORM</span>
+                  <span class="text-[10px] font-mono text-brand-gray">COLLABORATION</span>
+                </div>
+                <h4 class="text-xl font-bold text-brand-dark">數位資產管理平台</h4>
+                <p class="text-sm text-slate-600 leading-relaxed mt-2">協作資產檢索、分類與交付流程，提升跨部門素材使用效率。</p>
+              </div>
+            </article>
+
+            <article class="group bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div class="aspect-[16/7] bg-slate-100 overflow-hidden">
+                <img src="portfolio/KPI_intro.png" alt="KPI Reporter 數據管理平台專案畫面" class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-3 mb-3">
+                  <span class="text-xs font-mono font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">KPI / DATA SYSTEM</span>
+                  <span class="text-[10px] font-mono text-brand-gray">COLLABORATION</span>
+                </div>
+                <h4 class="text-xl font-bold text-brand-dark">KPI Reporter 數據平台</h4>
+                <p class="text-sm text-slate-600 leading-relaxed mt-2">協作資料檢視、報表流程與後台元件，簡化績效追蹤。</p>
+              </div>
+            </article>
+
+            <article class="group bg-white rounded-3xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div class="aspect-[16/7] bg-slate-100 overflow-hidden">
+                <img src="portfolio/tec_intro.png" alt="AI 智慧寫作與語音產品專案畫面" class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-3 mb-3">
+                  <span class="text-xs font-mono font-semibold text-brand-mint bg-emerald-50 px-2 py-0.5 rounded">AI / PRODUCT</span>
+                  <span class="text-[10px] font-mono text-brand-gray">LEAD / COLLABORATION</span>
+                </div>
+                <h4 class="text-xl font-bold text-brand-dark">AI 智慧寫作與語音產品</h4>
+                <p class="text-sm text-slate-600 leading-relaxed mt-2">參與 AI 互動、內容層級與產品頁面，打造易懂可信的體驗。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 05. Insights Section                           -->
+  <!-- ============================================== -->
+  <section id="insights" class="py-28 bg-white border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono font-bold text-brand-blue tracking-widest uppercase">05 / INSIGHTS</span>
+          <span class="h-px w-8 bg-brand-blue"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+          Thoughts on Design<br />& Technology.
+        </h2>
+        <p class="text-base text-slate-600 leading-relaxed">
+          分享 UI/UX、資訊架構、品牌視覺與 AI 工作流程的實務觀察。
+        </p>
+      </div>
+
+      <!-- Editorial Quiet Articles List -->
+      <div class="divide-y divide-brand-border border-y border-brand-border">
+        
+        <!-- Article 01 -->
+        <article class="py-8 group flex flex-col md:flex-row md:items-baseline justify-between gap-6 hover:bg-brand-bgSubtle/50 px-4 -mx-4 rounded-xl transition-colors">
+          <div class="md:w-1/4">
+            <span class="text-xs font-mono font-semibold text-brand-blue">UI/UX & ARCHITECTURE</span>
+            <div class="text-xs text-brand-gray font-mono mt-1">EST. 5 MIN READ</div>
+          </div>
+          <div class="md:w-2/4 space-y-2">
+            <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-blue transition-colors">
+              架構先行：如何為複雜後台系統梳理直覺的使用者體驗
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              探討如何以 OOUX 與任務拆解，簡化高密度資料與權限系統。
+            </p>
+          </div>
+          <div class="md:w-1/4 md:text-right">
+            <button type="button" onclick="openArticleModal('ia')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-dark group-hover:text-brand-blue transition-colors">
+              <span>閱讀觀點 (Read Note)</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 02 -->
+        <article class="py-8 group flex flex-col md:flex-row md:items-baseline justify-between gap-6 hover:bg-brand-bgSubtle/50 px-4 -mx-4 rounded-xl transition-colors">
+          <div class="md:w-1/4">
+            <span class="text-xs font-mono font-semibold text-brand-purple">AI & DESIGN WORKFLOW</span>
+            <div class="text-xs text-brand-gray font-mono mt-1">EST. 4 MIN READ</div>
+          </div>
+          <div class="md:w-2/4 space-y-2">
+            <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors">
+              人機協作時代：將生成式 AI 整合進日常設計研究與概念探索
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              分享如何以 AI 協助 Moodboard、文案佔位與使用者情境探索。
+            </p>
+          </div>
+          <div class="md:w-1/4 md:text-right">
+            <button type="button" onclick="openArticleModal('ai_workflow')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-dark group-hover:text-brand-purple transition-colors">
+              <span>閱讀觀點 (Read Note)</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 03 -->
+        <article class="py-8 group flex flex-col md:flex-row md:items-baseline justify-between gap-6 hover:bg-brand-bgSubtle/50 px-4 -mx-4 rounded-xl transition-colors">
+          <div class="md:w-1/4">
+            <span class="text-xs font-mono font-semibold text-emerald-700">BRAND & SYSTEMS</span>
+            <div class="text-xs text-brand-gray font-mono mt-1">EST. 6 MIN READ</div>
+          </div>
+          <div class="md:w-2/4 space-y-2">
+            <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-mint transition-colors">
+              跨維度的一致性：從品牌視覺識別走向可落地的設計系統
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              探討如何以 Design Tokens 連結品牌指南與產品介面。
+            </p>
+          </div>
+          <div class="md:w-1/4 md:text-right">
+            <button type="button" onclick="openArticleModal('brand_sys')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-dark group-hover:text-brand-mint transition-colors">
+              <span>閱讀觀點 (Read Note)</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 06. Core Products & Technical Solutions        -->
+  <!-- ============================================== -->
+  <section id="solutions" class="py-28 bg-white border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono font-bold text-brand-blue tracking-widest uppercase">06 / SOLUTIONS</span>
+          <span class="h-px w-8 bg-brand-blue"></span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
+          Core Products<br />& Technical Solutions.
+        </h2>
+        <p class="text-base text-slate-600 leading-relaxed">
+          從產品體驗到品牌溝通，提供清晰一致的設計解決方案。
+        </p>
+      </div>
+
+      <!-- Solution Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- UIUX Design -->
+        <article class="group p-8 bg-brand-bgSubtle border border-brand-border rounded-3xl hover:bg-white hover:border-brand-blue/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 mb-8 rounded-2xl bg-blue-50 text-brand-blue flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+            <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i>
+          </div>
+          <p class="text-xs font-mono font-semibold text-brand-blue tracking-widest uppercase mb-3">01 / PRODUCT EXPERIENCE</p>
+          <h3 class="text-2xl font-bold text-brand-dark mb-4">UIUX Design</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            以研究、架構與原型，打造直覺且支持商業目標的產品體驗。
+          </p>
+        </article>
+
+        <!-- Visual Identity Design -->
+        <article class="group p-8 bg-brand-bgSubtle border border-brand-border rounded-3xl hover:bg-white hover:border-brand-purple/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 mb-8 rounded-2xl bg-purple-50 text-brand-purple flex items-center justify-center text-2xl group-hover:bg-brand-purple group-hover:text-white transition-colors duration-300">
+            <i class="fa-solid fa-palette" aria-hidden="true"></i>
+          </div>
+          <p class="text-xs font-mono font-semibold text-brand-purple tracking-widest uppercase mb-3">02 / BRAND SYSTEM</p>
+          <h3 class="text-2xl font-bold text-brand-dark mb-4">Visual Identity Design</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+              將品牌核心價值轉化為一致、可延伸的視覺識別系統。
+          </p>
+        </article>
+
+        <!-- Social Media Graphic Design -->
+        <article class="group p-8 bg-brand-bgSubtle border border-brand-border rounded-3xl hover:bg-white hover:border-brand-mint/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 mb-8 rounded-2xl bg-emerald-50 text-brand-mint flex items-center justify-center text-2xl group-hover:bg-brand-mint group-hover:text-white transition-colors duration-300">
+            <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+          </div>
+          <p class="text-xs font-mono font-semibold text-emerald-700 tracking-widest uppercase mb-3">03 / CONTENT DESIGN</p>
+          <h3 class="text-2xl font-bold text-brand-dark mb-4">Social Media Graphic Design</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+              規劃社群視覺與版型，提升品牌辨識度與溝通效率。
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 07. Contact & Consultation                     -->
+  <!-- ============================================== -->
+  <section id="contact" class="py-28 bg-brand-bgSubtle border-t border-brand-border relative overflow-hidden">
+    
+    <!-- Subtle Gradient background glow -->
+    <div class="absolute -top-32 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-brand-blue/6 to-brand-mint/6 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        
+        <!-- Live Status Pill Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-brand-border shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-brand-mint animate-pulse"></span>
+          <span class="text-xs font-mono font-semibold text-slate-700">Status: Ready to Connect · 開放專案諮詢</span>
+        </div>
+
+        <!-- Master Contact Title -->
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-tight">
+          Let's Create<br />Something Meaningful.
+        </h2>
+
+        <!-- Subtitle Narrative -->
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          正在規劃數位產品、品牌視覺或 AI 工作流程？歡迎交流你的想法。
+        </p>
+
+        <!-- Main Consultation Actions -->
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <!-- Primary CTA: Project Brief Google Form -->
+          <a href="https://forms.gle/9mpWHKL9jsHDnA2S6" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-brand-blue hover:bg-blue-700 text-white rounded-full font-semibold text-sm transition-all duration-300 shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 hover:-translate-y-0.5 flex items-center justify-center gap-3 group">
+            <i class="fa-solid fa-clipboard-list w-4 text-center" aria-hidden="true"></i>
+            <span>填寫需求表單</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true"></i>
+          </a>
+          
+          <!-- Secondary CTA: Direct Google Calendar Booking Link -->
+          <a href="https://calendar.app.google/rZFTnk3H9mxxmzDP9" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-brand-dark hover:bg-brand-blue text-white rounded-full font-semibold text-sm transition-all duration-300 shadow-lg shadow-slate-900/10 hover:shadow-blue-500/20 hover:-translate-y-0.5 flex items-center justify-center gap-3 group">
+            <span>Book a Consultation</span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </a>
+
+          <!-- Secondary CTA: Copy Email / Direct Contact -->
+          <button type="button" id="copy-email-btn" class="w-full sm:w-auto px-8 py-4 bg-white border border-brand-border hover:border-brand-purple text-brand-dark hover:text-brand-purple rounded-full font-semibold text-sm transition-all duration-300 shadow-sm flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span id="copy-email-text">Get in Touch (Copy Email)</span>
+          </button>
+
+        </div>
+
+        <!-- Social & Contact Coordinates -->
+        <div class="pt-12 border-t border-brand-border/70 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-brand-gray">
+          <div class="flex items-center gap-2">
+            <span class="text-brand-dark font-semibold">EMAIL:</span>
+            <a href="mailto:jsk692@gmail.com" class="hover:text-brand-blue transition-colors" onclick="copyContactEmail(); return false;">jsk692@gmail.com</a>
+          </div>
+          <div class="w-1 h-1 rounded-full bg-brand-border"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-brand-dark font-semibold">LOCATION:</span>
+            <span>TAIPEI, TAIWAN (GMT+8)</span>
+          </div>
+          <div class="w-1 h-1 rounded-full bg-brand-border"></div>
+          <div class="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/yenyilee2025/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-brand-blue transition-colors" aria-label="LinkedIn 個人頁面">
+              <i class="fa-brands fa-linkedin-in text-base" aria-hidden="true"></i>
+              <span>LINKEDIN ↗</span>
+            </a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition-colors">BEHANCE ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- 08. Global Footer                              -->
+  <!-- ============================================== -->
+  <footer class="py-12 bg-white border-t border-brand-border text-brand-gray text-xs">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <!-- Brand & Claim -->
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-brand-dark">Think. Design.</span>
+        <span class="text-brand-border">|</span>
+        <span>© 2026 Yenyi Lee. All rights reserved.</span>
+      </div>
+
+      <!-- Footer Quick Back to top & Specs -->
+      <div class="flex items-center gap-6 font-mono">
+        <button type="button" onclick="openSpecsModal()" class="text-brand-blue hover:underline">
+          檢視設計規格手冊 (Specs)
+        </button>
+        <a href="#hero" class="hover:text-brand-dark transition-colors flex items-center gap-1">
+          <span>TOP</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- Global Modals & Drawers                        -->
+  <!-- ============================================== -->
+
+  <!-- Modal 1: Case Detail Inspector Modal -->
+  <div id="case-modal" class="fixed inset-0 z-50 hidden bg-brand-dark/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true">
+    <div class="bg-white w-full max-w-2xl rounded-3xl border border-brand-border shadow-2xl overflow-hidden max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-brand-border flex items-center justify-between bg-brand-bgSubtle">
+        <div>
+          <span id="modal-category" class="text-xs font-mono font-bold text-brand-blue uppercase">PROJECT CASE</span>
+          <h3 id="modal-title" class="text-xl font-bold text-brand-dark mt-0.5">Project Scope</h3>
+        </div>
+        <button type="button" onclick="closeCaseModal()" class="p-2 rounded-full hover:bg-slate-200 text-brand-gray transition-colors" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 sm:p-8 space-y-6 overflow-y-auto text-sm text-slate-600 leading-relaxed">
+        
+        <div>
+          <h4 class="text-xs font-mono font-semibold text-brand-dark uppercase tracking-wider mb-2">設計挑戰與核心課題 (Design Challenge)</h4>
+          <p id="modal-challenge" class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            載入專案挑戰中...
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-semibold text-brand-dark uppercase tracking-wider mb-2">解決方案與設計方法 (Solution & Approach)</h4>
+          <p id="modal-solution">
+            載入設計解法中...
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-semibold text-brand-dark uppercase tracking-wider mb-2">素材替換提示 (Asset Replacement Notice)</h4>
+          <p class="text-xs text-brand-gray bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200 font-mono">
+            * 本案例使用向量 SVG 原型示意。您可在此區塊直接替換為正式專案截圖或 Figma 展示連結。
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-brand-border bg-brand-bgSubtle flex items-center justify-between">
+        <span class="text-xs font-mono text-brand-gray">Yenyi Lee Portfolio System</span>
+        <button type="button" onclick="closeCaseModal()" class="px-5 py-2 text-xs font-bold text-white bg-brand-dark rounded-full hover:bg-brand-blue transition-colors">
+          關閉視窗 (Close)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal 2: Design Strategy & Architecture Specs Drawer -->
+  <div id="specs-modal" class="fixed inset-0 z-50 hidden bg-brand-dark/50 backdrop-blur-sm flex justify-end" role="dialog" aria-modal="true">
+    <div class="bg-white w-full max-w-xl h-full shadow-2xl border-l border-brand-border flex flex-col overflow-hidden animate-in slide-in-from-right duration-300">
+      
+      <!-- Specs Drawer Header -->
+      <div class="p-6 border-b border-brand-border bg-brand-bgSubtle flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-purple"></span>
+          <h3 class="text-base font-bold text-brand-dark font-mono">DESIGN SPECIFICATIONS & IA</h3>
+        </div>
+        <button type="button" onclick="closeSpecsModal()" class="p-2 rounded-full hover:bg-slate-200 text-brand-gray transition-colors" aria-label="Close Specs">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Specs Drawer Content (Documentation of 5 Parts) -->
+      <div class="p-6 overflow-y-auto space-y-8 text-xs text-slate-600 leading-relaxed font-sans">
+        
+        <!-- Part 1 Strategy -->
+        <div class="space-y-2">
+          <div class="text-brand-blue font-bold font-mono text-sm">第一部分｜設計策略摘要</div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+            <p><strong class="text-brand-dark">核心視覺概念：</strong>Elegant White Tech × Editorial Design。以白色、黑灰及大留白建立高級極簡感，主科技藍（#2563EB）引導互動，輔以紫色與薄荷綠微光。</p>
+            <p><strong class="text-brand-dark">首屏記憶點：</strong>Think. Design. 細緻打字機動畫、微觀標籤及右側互動式「Design Matrix System」動態節點裝置，於 3-5 秒內建立跨領域專家形象。</p>
+            <p><strong class="text-brand-dark">轉換路徑：</strong>透過「首屏價值 → 理念與能力 → 具體服務 → 精選作品 → 設計觀點 → 預約諮詢」的循序節奏，自然引導訪客預約 Google Calendar 會談。</p>
+          </div>
+        </div>
+
+        <!-- Part 2 Tree IA -->
+        <div class="space-y-2">
+          <div class="text-brand-purple font-bold font-mono text-sm">第二部分｜網站資訊架構 (Information Architecture)</div>
+          <pre class="bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-[11px] overflow-x-auto leading-relaxed">
+Yenyi Lee Personal Brand
+├── 01. Home｜首頁
+│   ├── 個人品牌主視覺 (Hero Visual Canvas)
+│   ├── Think. Design. 動態標題 (Typewriter)
+│   ├── 個人定位與價值主張
+│   ├── Explore My Work (Smooth Scroll)
+│   └── Let's Talk (Calendar Booking Link)
+├── 02. About｜關於我
+│   ├── 個人介紹 (6年資歷、以使用者為核心)
+│   ├── 核心設計哲學與四大品牌特質
+│   └── 設計思維與系統化方法
+├── 03. Services｜AI 解決方案
+│   ├── UI/UX & Dashboard Design
+│   ├── Brand Identity System
+│   ├── Social Graphic Design
+│   └── AI-Enhanced Design Workflow
+├── 04. Selected Work｜精選作品集
+│   ├── 01. CMS Redesign & Modernization
+│   ├── 02. Digital Asset Management
+│   ├── 03. AI Feature Integration
+│   ├── 04. Design System & Guideline
+│   └── 05. Brand & Graphic Design
+├── 05. Insights｜設計觀點
+│   ├── 01. 後台系統使用者體驗與架構
+│   ├── 02. 生成式 AI 與日常設計工作流
+│   └── 03. 品牌視覺到可落地設計系統
+└── 06. Contact｜聯絡與預約諮詢
+    ├── 預約諮詢按鈕 (Google Calendar 外部連結)
+    ├── Email 複製與直接聯絡功能
+    └── 社群與時區坐標資訊</pre>
+        </div>
+
+        <!-- Part 4 Replacement Guide -->
+        <div class="space-y-2">
+          <div class="text-emerald-700 font-bold font-mono text-sm">第四部分｜可替換內容指引 (Replacement Guide)</div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+            <p><strong class="text-brand-dark">1. 作品圖片路徑：</strong>搜尋程式碼中 <code>[ 圖片可替換區塊 ]</code> 或 <code>article</code> 內的 SVG 佔位圖，直接替換為 <code>&lt;img src="your-image.jpg" class="w-full h-full object-cover" alt="Project"&gt;</code>。</p>
+            <p><strong class="text-brand-dark">2. 電子郵件與社群：</strong>目前聯絡信箱為 <code>jsk692@gmail.com</code>；LinkedIn 與 Behance 社群連結已設有 <code>target="_blank"</code>。</p>
+            <p><strong class="text-brand-dark">3. 預約諮詢網址：</strong>已內嵌指定的 Google Calendar 預約連結 <code>https://calendar.app.google/rZFTnk3H9mxxmzDP9</code>。</p>
+          </div>
+        </div>
+
+        <!-- Part 5 Checklist -->
+        <div class="space-y-2">
+          <div class="text-slate-900 font-bold font-mono text-sm">第五部分｜完成度與無障礙檢查 (Checklist)</div>
+          <ul class="list-disc list-inside space-y-1 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <li>✓ 打字機動畫支援 <code>prefers-reduced-motion</code></li>
+            <li>✓ 導覽列支援固定毛玻璃背景與錨點平滑捲動</li>
+            <li>✓ RWD 支援手機滿版抽屜選單與安全觸控區域</li>
+            <li>✓ Canvas 粒子系統具備自適應解析度與滑鼠避讓互動</li>
+            <li>✓ 無使用任何 <code>alert()</code>，使用微型 Toast 提示</li>
+            <li>✓ 諮詢按鈕具備綠色即時微光與狀態回饋</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Specs Drawer Footer -->
+      <div class="p-4 border-t border-brand-border bg-brand-bgSubtle flex items-center justify-end">
+        <button type="button" onclick="closeSpecsModal()" class="px-5 py-2 text-xs font-bold text-white bg-brand-dark rounded-full hover:bg-brand-blue transition-colors">
+          完成檢視 (Done)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container (No Alert policy) -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-brand-dark text-white text-xs px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transition-all">
+    <span class="w-2 h-2 rounded-full bg-brand-mint"></span>
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <script>
+    /* ========================================================
+       Vanilla JavaScript Controller for Yenyi Lee Brand Site
+       ======================================================== */
+
+    (function initTypewriter() {
+      const el = document.getElementById('typewriter-text');
+      if (!el) return;
+
+      const fullText = "Think. Design.";
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      // If user prefers reduced motion, show full text immediately
+      if (mediaQuery.matches) {
+        el.textContent = fullText;
+        return;
+      }
+
+      let charIndex = 0;
+      el.textContent = "";
+
+      function typeChar() {
+        if (charIndex < fullText.length) {
+          el.textContent += fullText.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeChar, 110);
+        }
+      }
+
+      // Start after initial page render
+      setTimeout(typeChar, 400);
+    })();
+
+    (function initHeroCanvas() {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let mouse = { x: -1000, y: -1000, radius: 100 };
+      let particles = [];
+      const particleCount = 28; // Low density for calm elegance
+
+      function resize() {
+        width = canvas.width = canvas.parentElement.clientWidth;
+        height = canvas.height = canvas.parentElement.clientHeight;
+        initParticles();
+      }
+
+      function initParticles() {
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.45,
+            vy: (Math.random() - 0.5) * 0.45,
+            radius: Math.random() * 2 + 1.5,
+          });
+        }
+      }
+
+      canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
+
+      canvas.addEventListener('mouseleave', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+      });
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Update and draw particles
+        for (let i = 0; i < particles.length; i++) {
+          let p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+
+          // Gentle mouse repel
+          let dx = mouse.x - p.x;
+          let dy = mouse.y - p.y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius) {
+            let angle = Math.atan2(dy, dx);
+            p.x -= Math.cos(angle) * 1.5;
+            p.y -= Math.sin(angle) * 1.5;
+          }
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(37, 99, 235, 0.5)';
+          ctx.fill();
+
+          // Connect nearby particles with subtle lines
+          for (let j = i + 1; j < particles.length; j++) {
+            let p2 = particles[j];
+            let dist2 = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (dist2 < 110) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(124, 58, 237, ${0.18 * (1 - dist2 / 110)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      // Check prefers-reduced-motion before starting dynamic loop
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.addEventListener('resize', resize);
+        resize();
+        animate();
+      }
+    })();
+
+    const mobileBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+
+      // Close mobile menu on clicking any navigation link
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    const projectDatabase = {
+      cms: {
+        category: "UI/UX & Information Architecture",
+        title: "CMS Redesign & Modernization (後台內容管理系統改版)",
+        challenge: "原有系統歷經多年擴充，導致功能繁瑣混亂，不同部門編輯在發布新聞與資產時需在 7 個子頁面間來回切換，錯誤發布率偏高且學習曲線陡峭。",
+        solution: "透過工作坊重構內容生命週期模型（Content Lifecycle），採用模組化 Card 工作台與即時權限過濾器，建立即時校對面板，使整體工作流程步驟減少 40% 以上。"
+      },
+      dam: {
+        category: "Digital Asset Management",
+        title: "Digital Asset Management (數位資產管理平台)",
+        challenge: "企業內部累積超過數十萬筆數位檔案，包含各國語系向量圖檔與行銷素材，舊有分類結構無法支援多維度篩選，檢索效率低落。",
+        solution: "設計階層式標籤分類邏輯（Taxonomy）與自訂篩選器，並加入色彩模型與解析度即時預覽，大幅縮短設計與行銷團隊間的資產交付時間。"
+      },
+      ai: {
+        category: "AI Interaction Design",
+        title: "AI Feature Integration (AI 功能整合與應用)",
+        challenge: "生成式 AI 與語音合成演算法參數複雜，未經設計的介面讓非技術背景使用者產生強烈的不信任感與挫折感。",
+        solution: "引入漸進式揭露（Progressive Disclosure）原則，將繁瑣的音調參數轉化為情境滑桿與音波即時可視化動態，並提供一鍵對比功能，建立流暢的人機協作體驗。"
+      },
+      ds: {
+        category: "Design System & Guideline",
+        title: "Design System & Guideline (設計系統與介面規範)",
+        challenge: "多個跨平台產品呈現樣式分歧，前端工程師與設計師缺乏統一的 Token 語義，造成大量重複代碼與樣式維護困難。",
+        solution: "建立具備高維護性的 Design Token 系統，覆蓋顏色、字級、間距與陰影層次，全組件均通過 WCAG 2.1 AA 無障礙對比度標準，並落實 Figma 與代碼的同步規範。"
+      },
+      brand: {
+        category: "Brand & Graphic Design",
+        title: "Brand & Graphic Design (品牌識別與社群視覺)",
+        challenge: "品牌既有形象偏向傳統企業，無法吸引年輕數位原住民與高階科技受眾，亟需建立兼具現代科技感與溫度的視覺語言。",
+        solution: "結合網格排版系統與幾何符號，定調「理性、精緻、探索」的品牌個性，延伸製作動態識別 Logo、社群視覺網格規範及品牌手冊。"
+      }
+    };
+
+    function openCaseModal(projectId) {
+      const data = projectDatabase[projectId];
+      if (!data) return;
+
+      document.getElementById('modal-category').textContent = data.category;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-challenge').textContent = data.challenge;
+      document.getElementById('modal-solution').textContent = data.solution;
+
+      const modal = document.getElementById('case-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCaseModal() {
+      const modal = document.getElementById('case-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close on backdrop click
+    document.getElementById('case-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'case-modal') closeCaseModal();
+    });
+
+    const specsModal = document.getElementById('specs-modal');
+    function openSpecsModal() {
+      specsModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSpecsModal() {
+      specsModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('open-specs-btn').addEventListener('click', openSpecsModal);
+    const mobileSpecsBtn = document.getElementById('mobile-specs-btn');
+    if (mobileSpecsBtn) mobileSpecsBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      openSpecsModal();
+    });
+
+    specsModal.addEventListener('click', (e) => {
+      if (e.target.id === 'specs-modal') closeSpecsModal();
+    });
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const text = document.getElementById('toast-message');
+      text.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    function copyContactEmail() {
+      const email = "jsk692@gmail.com";
+      const dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = email;
+      dummy.select();
+      try {
+        document.execCommand("copy");
+        showToast("已成功複製 Email: " + email);
+      } catch (err) {
+        showToast("聯絡信箱: " + email);
+      }
+      document.body.removeChild(dummy);
+    }
+
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', copyContactEmail);
+    }
+
+    function openArticleModal(type) {
+      const articleNotes = {
+        ia: "已開啟觀點文章：《架構先行：如何為複雜後台系統梳理直覺的使用者體驗》。完整 Markdown 內容可於設計手冊或外部部落格中置換連結。",
+        ai_workflow: "已開啟觀點文章：《人機協作時代：將生成式 AI 整合進日常設計研究與概念探索》。",
+        brand_sys: "已開啟觀點文章：《跨維度的一致性：從品牌視覺識別走向可落地的設計系統》。"
+      };
+      showToast(articleNotes[type] || "文章預覽載入中...");
+    }
+  </script>
+</body>
+</html>
